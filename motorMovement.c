@@ -83,3 +83,15 @@ void leftMotorBackwards() {
     TA1CCR1 = 0;
     TA0CCR1 = 25;
 }
+
+void rightMotorBackwards() {
+    P2SEL |= BIT0;
+    P2SEL |= BIT1;
+
+	TA1CCTL0 |= OUTMOD_7;
+    TA1CCTL1 |= OUTMOD_7;
+
+    TA1CCR0 = 100;
+    TA0CCR1 = 0;
+    TA1CCR1 = 10;
+}

@@ -10,8 +10,9 @@ int main(void)
     while (1) {
         //leftMotorForward();
         //_delay_cycles(50000);
-        rightMotorForward();
-    	leftMotorBackwards();
+        //rightMotorForward();
+    	//leftMotorBackwards();
+    	rightMotorBackwards();
     }
     return 0;
 }

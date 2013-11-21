@@ -14,3 +14,5 @@ void leftMotorForward();
 void rightMotorForward();
 
 void leftMotorBackwards();
+
+void rightMotorBackwards();
