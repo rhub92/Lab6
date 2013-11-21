@@ -12,3 +12,5 @@ void initMotorTimer();
 void leftMotorForward();
 
 void rightMotorForward();
+
+void leftMotorBackwards();
