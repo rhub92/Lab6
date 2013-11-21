@@ -16,3 +16,15 @@ void rightMotorForward();
 void leftMotorBackwards();
 
 void rightMotorBackwards();
+
+void moveRobotForward();
+
+void moveRobotBackwards();
+
+void moveRobotSharpLeft();
+
+void moveRobotSharpRight();
+
+void moveRobotLeft();
+
+void moveRobotRight();

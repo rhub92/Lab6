@@ -12,7 +12,10 @@ int main(void)
         //_delay_cycles(50000);
         //rightMotorForward();
     	//leftMotorBackwards();
-    	rightMotorBackwards();
+    	//rightMotorBackwards();
+
+    	//moveRobotForward();
+    	moveRobotBackwards();
     }
     return 0;
 }

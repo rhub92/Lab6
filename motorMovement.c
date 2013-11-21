@@ -81,7 +81,7 @@ void leftMotorBackwards() {
 
     TA0CCR0 = 100;
     TA1CCR1 = 0;
-    TA0CCR1 = 25;
+    TA0CCR1 = 55;
 }
 
 void rightMotorBackwards() {
@@ -93,5 +93,15 @@ void rightMotorBackwards() {
 
     TA1CCR0 = 100;
     TA0CCR1 = 0;
-    TA1CCR1 = 10;
+    TA1CCR1 = 55;
+}
+
+void moveRobotForward() {
+	leftMotorForward();
+	rightMotorForward();
+}
+
+void moveRobotBackwards() {
+	leftMotorBackwards();
+	rightMotorBackwards();
 }
