@@ -8,15 +8,15 @@ int main(void)
 
 
     while (1) {
-        //leftMotorForward();
-        //_delay_cycles(50000);
-        //rightMotorForward();
+    	moveRobotForward();
     	//leftMotorBackwards();
     	//rightMotorBackwards();
 
 
-    	//moveRobotForward();
+    	//moveRobotBackwards();
+    	_delay_cycles(1000000);
     	stopRobot();
+    	_delay_cycles(1000000);
 
     }
     return 0;

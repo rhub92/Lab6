@@ -50,7 +50,7 @@ void leftMotorForward() {
     //TA1CCTL1 |= OUTMOD_5;
 
     TA0CCR0 = 100;
-    TA1CCR1 = 0;
+    //TA1CCR1 = 0;
     TA0CCR1 = 45;
     //_delay_cycles(5000000);
     //TA0CCR1 = 0;
@@ -66,7 +66,7 @@ void rightMotorForward() {
     TA1CCTL1 |= OUTMOD_7;
 
     TA1CCR0 = 100;
-    TA0CCR1 = 0;
+    //TA0CCR1 = 0;
     TA1CCR1 = 45;
     //_delay_cycles(5000000);
     //TA1CCR1 = 0;
@@ -80,7 +80,7 @@ void leftMotorBackwards() {
     TA0CCTL1 |= OUTMOD_7;
 
     TA0CCR0 = 100;
-    TA1CCR1 = 0;
+    //TA1CCR1 = 0;
     TA0CCR1 = 55;
 }
 
@@ -92,7 +92,7 @@ void rightMotorBackwards() {
     TA1CCTL1 |= OUTMOD_7;
 
     TA1CCR0 = 100;
-    TA0CCR1 = 0;
+    //TA0CCR1 = 0;
     TA1CCR1 = 55;
 }
 
