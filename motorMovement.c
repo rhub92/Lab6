@@ -105,3 +105,16 @@ void moveRobotBackwards() {
 	leftMotorBackwards();
 	rightMotorBackwards();
 }
+
+void stopRobot() {
+    P2SEL |= BIT0;
+    P2SEL |= BIT1;
+    P1SEL |= BIT1;
+    P1SEL |= BIT2;
+
+    TA0CCR0 = 100;
+    TA1CCR0 = 100;
+    TA0CCR1 = 0;
+    TA1CCR1 = 0;
+
+}

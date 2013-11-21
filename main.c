@@ -14,8 +14,10 @@ int main(void)
     	//leftMotorBackwards();
     	//rightMotorBackwards();
 
+
     	//moveRobotForward();
-    	moveRobotBackwards();
+    	stopRobot();
+
     }
     return 0;
 }

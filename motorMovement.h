@@ -28,3 +28,5 @@ void moveRobotSharpRight();
 void moveRobotLeft();
 
 void moveRobotRight();
+
+void stopRobot();
