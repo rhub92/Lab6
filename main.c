@@ -6,17 +6,40 @@ int main(void)
 
     initMotorTimer();
 
-
     while (1) {
+
     	moveRobotForward();
-    	//leftMotorBackwards();
-    	//rightMotorBackwards();
-
-
-    	//moveRobotBackwards();
-    	_delay_cycles(1000000);
+    	//_delay_cycles(2000000);
     	stopRobot();
-    	_delay_cycles(1000000);
+    	_delay_cycles(2000000);
+
+
+    	moveRobotBackwards();
+    	//_delay_cycles(2000000);
+    	stopRobot();
+    	_delay_cycles(2000000);
+
+
+    	moveRobotSharpLeft();
+    	//_delay_cycles(2000000);
+    	stopRobot();
+    	_delay_cycles(2000000);
+
+
+    	moveRobotSharpRight();
+    	//_delay_cycles(2000000);
+    	stopRobot();
+    	_delay_cycles(2000000);
+
+    	moveRobotLeft();
+    	//_delay_cycles(2000000);
+    	stopRobot();
+    	_delay_cycles(2000000);
+
+    	moveRobotRight();
+    	//_delay_cycles(2000000);
+    	stopRobot();
+    	_delay_cycles(2000000);
 
     }
     return 0;

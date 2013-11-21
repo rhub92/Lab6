@@ -51,7 +51,7 @@ void leftMotorForward() {
 
     TA0CCR0 = 100;
     //TA1CCR1 = 0;
-    TA0CCR1 = 45;
+    TA0CCR1 = 60;
     //_delay_cycles(5000000);
     //TA0CCR1 = 0;
 }
@@ -67,7 +67,7 @@ void rightMotorForward() {
 
     TA1CCR0 = 100;
     //TA0CCR1 = 0;
-    TA1CCR1 = 45;
+    TA1CCR1 = 60;
     //_delay_cycles(5000000);
     //TA1CCR1 = 0;
 }
@@ -81,7 +81,7 @@ void leftMotorBackwards() {
 
     TA0CCR0 = 100;
     //TA1CCR1 = 0;
-    TA0CCR1 = 55;
+    TA0CCR1 = 40;
 }
 
 void rightMotorBackwards() {
@@ -93,28 +93,76 @@ void rightMotorBackwards() {
 
     TA1CCR0 = 100;
     //TA0CCR1 = 0;
-    TA1CCR1 = 55;
+    TA1CCR1 = 40;
 }
 
 void moveRobotForward() {
 	leftMotorForward();
 	rightMotorForward();
+	_delay_cycles(2000000);
+	TA0CCTL0 &= ~OUTMOD_7;
+    TA0CCTL1 &= ~OUTMOD_7;
+	TA1CCTL0 &= ~OUTMOD_7;
+    TA1CCTL1 &= ~OUTMOD_7;
 }
 
 void moveRobotBackwards() {
 	leftMotorBackwards();
 	rightMotorBackwards();
+	_delay_cycles(2000000);
+	TA0CCTL0 &= ~OUTMOD_7;
+    TA0CCTL1 &= ~OUTMOD_7;
+	TA1CCTL0 &= ~OUTMOD_7;
+    TA1CCTL1 &= ~OUTMOD_7;
 }
 
 void stopRobot() {
-    P2SEL |= BIT0;
-    P2SEL |= BIT1;
-    P1SEL |= BIT1;
-    P1SEL |= BIT2;
+    P2SEL &= ~BIT0;
+    P2SEL &= ~BIT1;
+    P1SEL &= ~BIT1;
+    P1SEL &= ~BIT2;
 
     TA0CCR0 = 100;
     TA1CCR0 = 100;
     TA0CCR1 = 0;
     TA1CCR1 = 0;
 
+}
+
+void moveRobotSharpLeft() {
+	rightMotorForward();
+	leftMotorBackwards();
+	_delay_cycles(2000000);
+	TA0CCTL0 &= ~OUTMOD_7;
+    TA0CCTL1 &= ~OUTMOD_7;
+	TA1CCTL0 &= ~OUTMOD_7;
+    TA1CCTL1 &= ~OUTMOD_7;
+}
+
+void moveRobotSharpRight() {
+	leftMotorForward();
+	rightMotorBackwards();
+	_delay_cycles(2000000);
+	TA0CCTL0 &= ~OUTMOD_7;
+    TA0CCTL1 &= ~OUTMOD_7;
+	TA1CCTL0 &= ~OUTMOD_7;
+    TA1CCTL1 &= ~OUTMOD_7;
+}
+
+void moveRobotLeft() {
+	rightMotorForward();
+	_delay_cycles(2000000);
+	TA0CCTL0 &= ~OUTMOD_7;
+    TA0CCTL1 &= ~OUTMOD_7;
+	TA1CCTL0 &= ~OUTMOD_7;
+    TA1CCTL1 &= ~OUTMOD_7;
+}
+
+void moveRobotRight() {
+	leftMotorForward();
+	_delay_cycles(2000000);
+	TA0CCTL0 &= ~OUTMOD_7;
+    TA0CCTL1 &= ~OUTMOD_7;
+	TA1CCTL0 &= ~OUTMOD_7;
+    TA1CCTL1 &= ~OUTMOD_7;
 }
